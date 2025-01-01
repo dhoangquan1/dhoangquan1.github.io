@@ -1,0 +1,125 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Fira Code';
+    color: #FAE8EB;
+    scroll-behavior: smooth;
+}
+
+h1 {
+    font-size: 50px;
+}
+h2 {
+    font-size: 30px;
+}
+h3 {
+    font-size: 24px;
+}
+
+.NavBar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #1F1C18;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+}
+
+.NavBar li {
+    float: right;
+}
+
+.NavBar a {
+    display: block;
+    color: #FAE8EB;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.NavBar a:hover {
+    background-color: lightcoral;
+}
+
+.download-button {
+    color: lightcoral;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 20px;
+
+    border-radius: 5px;
+    border-width: 2px;
+    border-color:lightcoral;
+    border-style: solid;
+}
+
+section {
+    background-color: #17140f;
+    padding: 20px 10% 20px 10%;
+}
+
+#section1 {
+    height: 100vh;
+    background-color: transparent;
+    position: relative;
+    padding: 0;
+}
+.video-background {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.video-content {
+    position: absolute;
+    z-index: 1;
+    width: 45%;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+}
+
+.red-text {
+    color: lightcoral;
+}
+
+.project-container {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.left-container {
+    float:left; 
+    margin:0; 
+    width: 40%
+}
+
+.right-container {
+    float:left; 
+    margin:0; 
+    width: 50%;
+    padding: 20px;
+
+    border-radius: 10px;
+    border-color: lightcoral;
+    border-style: solid;
+    border-width: 2px;
+}
+
+.project-phone {
+    width: 30%;
+    object-fit: contain;
+    border-radius: 10px;
+    border-color: lightcoral;
+    border-style: solid;
+    border-width: 2px;
+    overflow: hidden;
+}

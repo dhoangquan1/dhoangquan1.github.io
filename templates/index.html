@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div>
+    <div >
+        <section id="section1">
+            {% include "about.html" %}
+        </section>
+        <section id="section2">
+            {% include "skill.html" %}
+        </section>
+        <section id="section3">
+            {% include "project.html" %}
+        </section>
+        <section id="section4">
+            {% include "education.html" %}
+        </section>
+        <section id="section5">
+            {% include "achievement.html" %}
+        </section>
+    </div>
+    
+    Free B Roll by <a href="http://www.videezy.com/">Videezy.com</a>
+</div>
+{% endblock %}
