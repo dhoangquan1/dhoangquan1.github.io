@@ -3,17 +3,18 @@ html, body {
     padding: 0;
     font-family: 'Fira Code';
     color: #FAE8EB;
+    background-color: #17140f;
     scroll-behavior: smooth;
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 40px;
 }
 h2 {
-    font-size: 30px;
+    font-size: 24px;
 }
 h3 {
-    font-size: 24px;
+    font-size: 18px;
 }
 
 .NavBar {
@@ -37,7 +38,7 @@ h3 {
     color: #FAE8EB;
     text-align: center;
     padding: 14px 16px;
-    font-size: 18px;
+    font-size: 16px;
     text-decoration: none;
 }
 
@@ -58,6 +59,11 @@ h3 {
     border-style: solid;
 }
 
+
+.download-button:hover {
+    background-color: #FAE8EB;
+}
+
 section {
     background-color: #17140f;
     padding: 20px 10% 20px 10%;
@@ -69,6 +75,11 @@ section {
     position: relative;
     padding: 0;
 }
+#section4 {
+    margin-top: 50px;
+    background-color: #1F1C18;
+}
+
 .video-background {
     top: 0;
     left: 0;
@@ -90,24 +101,30 @@ section {
     color: lightcoral;
 }
 
-.project-container {
-    width: 100%;
-    margin: 0;
-    display: flex;
-    justify-content: space-between;
-}
-.left-container {
-    float:left; 
-    margin:0; 
-    width: 40%
+@media screen and (min-width: 1200px) {
+    .project-container {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    .left-container {
+        float:left; 
+        margin:0; 
+        width: 40%
+    }
+    
+    .right-container {
+        float:left; 
+        margin:0; 
+        width: 50%;
+        
+    }
+    
 }
 
-.right-container {
-    float:left; 
-    margin:0; 
-    width: 50%;
+.project-imagebox {
     padding: 20px;
-
     border-radius: 10px;
     border-color: lightcoral;
     border-style: solid;
@@ -122,4 +139,67 @@ section {
     border-style: solid;
     border-width: 2px;
     overflow: hidden;
+}
+
+.project-web {
+    width: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+    border-color: lightcoral;
+    border-style: solid;
+    border-width: 2px;
+    overflow: hidden;
+}
+
+.edu-container {
+    display: flex;
+    gap: 20px;
+}
+
+.edu-logo {
+    width: 170px;
+    height: 170px;
+    object-fit: contain;
+}
+
+.edu-title {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: lightcoral;
+}
+
+.edu-text {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.contact-container {
+    height: 140px;
+    justify-content: center;
+    text-align: center;
+}
+
+.contact-container p {
+    margin-top: 0px;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+.contact-socials-container{
+    display: flex;
+}
+
+.social-logo{
+    height: auto;
+    width: 50px;
+}
+
+.social-logo:hover {
+    transform: scale(1.20);
+}
+
+.credit-link {
+    font-size: 8px;
 }
