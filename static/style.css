@@ -5,17 +5,30 @@ html, body {
     color: #FAE8EB;
     background-color: #17140f;
     scroll-behavior: smooth;
+    font-size: 14px;
 }
 
 h1 {
     font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 10px;
 }
 h2 {
     font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 25px;
 }
 h3 {
     font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 10px;
 }
+h4 {
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
 
 .NavBar {
     list-style-type: none;
@@ -50,7 +63,7 @@ h3 {
     color: lightcoral;
     text-align: center;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 14px;
     padding: 10px 20px;
 
     border-radius: 5px;
@@ -75,7 +88,7 @@ section {
     position: relative;
     padding: 0;
 }
-#section4 {
+section:last-child {
     margin-top: 50px;
     background-color: #1F1C18;
 }
@@ -151,6 +164,56 @@ section {
     overflow: hidden;
 }
 
+.skill-container {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.skillbox {
+    color: #FAE8EB;
+    text-align: center;
+    font-size: 14px;
+    padding: 2px 5px;
+    background-color: lightcoral;
+    border-radius: 3px;
+}
+
+.skill-flexbox {
+    text-align: center;
+    padding: 5px 10px;
+    background-color: lightcoral;
+    border-radius: 3px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill-flexbox p{
+    color: #FAE8EB;
+    font-size: 14px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.skill-flexbox:hover {
+    transform: scale(1.20);
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+
+.skill-logo{
+    height: 20px;
+    width: 20px;
+    object-fit: contain;
+    background-color: #FAE8EB;
+    border-radius: 5px;
+    padding: 2px;
+
+}
+
 .edu-container {
     display: flex;
     gap: 20px;
@@ -172,7 +235,6 @@ section {
 .edu-text {
     margin-top: 0px;
     margin-bottom: 10px;
-    font-size: 16px;
 }
 
 .contact-container {
