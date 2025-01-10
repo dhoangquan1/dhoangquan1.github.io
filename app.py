@@ -11,5 +11,5 @@ if __name__ == "__main__":
     
 with app.test_request_context():
     rendered = app.full_dispatch_request().data.decode()
-    with open("templates/index.html", "w") as f:
+    with open("docs/index.html", "w") as f:
         f.write(rendered)
