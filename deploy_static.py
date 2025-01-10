@@ -6,16 +6,8 @@ import os
 env = Environment(loader=FileSystemLoader("templates"))
 
 pages = [
-    {"template": "_project1.html", "output": "_project1.html"},
-    {"template": "_project2.html", "output": "_project2.html"},
     {"template": "base.html", "output": "base.html"},
-    
-    {"template": "index.html", "output": "index.html"},
-    {"template": "about.html", "output": "about.html"},
-    {"template": "project.html", "output": "project.html"},
-    {"template": "education.html", "output": "education.html"},
-    {"template": "skill.html", "output": "skill.html"},
-    {"template": "contact.html", "output": "contact.html"},
+    {"template": "index.html", "output": "index.html"}
 ]
 
 output_dir = "docs"
