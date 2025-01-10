@@ -1,3 +1,4 @@
+import shutil
 from jinja2 import Environment, FileSystemLoader
 import os
 
@@ -27,3 +28,5 @@ for page in pages:
     with open(output_path, "w") as f:
         f.write(rendered)
     print(f"Rendered: {output_path}")
+    
+shutil.copytree('static', os.path.join(output_dir, 'static'))
