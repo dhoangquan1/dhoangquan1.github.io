@@ -8,3 +8,8 @@ def index():
 
 if __name__ == "__main__":
     app.run(debug=True) 
+    
+with app.test_request_context():
+    rendered = app.full_dispatch_request().data.decode()
+    with open("templates/index.html", "w") as f:
+        f.write(rendered)
