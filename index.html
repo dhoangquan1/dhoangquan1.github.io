@@ -4,17 +4,27 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Fira Code'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="static/style.css">
+
+        <title>Quan Dinh's Portfolio</title>
+        <link rel="icon" type="image/png" href="static/web_logo.png">
     </head>
 
     <body>
-        <ul class="NavBar">
-            <li><a href="#section5">Contacts</a></li>
-            <li><a href="#section4">Skills</a></li>
-            <li><a href="#section3">Education</a></li>
-            <li><a href="#section2">Projects</a></li>
-            <li><a href="#section1">Home</a></li>
-        </ul>
+        <div class="NavBar">
+            <button id="menu-toggle" onclick="toggleDetails()">
+                ☰
+            </button>
+
+            <ul id="menu" class="nav-links">
+                <li><a href="#section1">Home</a></li>
+                <li><a href="#section2">Projects</a></li>
+                <li><a href="#section3">Education</a></li>
+                <li><a href="#section4">Skills</a></li>
+                <li><a href="#section5">Contacts</a></li>
+            </ul>
+        </div>
 
         <div style="margin-top: 46px;">
             
@@ -82,11 +92,11 @@
             <div style="display: flex; justify-content: space-between">
                 <img class="project-phone" src="static/p1/Front.PNG"/>
                 <video class="project-phone" autoplay muted loop>
-                    <source src="static/p1/Demo1.MP4" type="video/mp4">
+                    <source src="static/p1/Demo 1.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <video class="project-phone" autoplay muted loop>
-                    <source src="static/p1/Demo2.MP4" type="video/mp4">
+                    <source src="static/p1/Demo 2.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
@@ -145,7 +155,7 @@
     </br>
     <div class="right-container">
         <div class="project-imagebox">
-            <img class="project-web" src="static/p2/Front.png"/>
+            <img class="project-web" src="static/p2/Front.PNG"/>
         </div>
     </div>
 </div>
@@ -166,9 +176,9 @@
             <p class="edu-text"><b>Awards:</b></p>
             <ul>
                 <li>Charles O. Thompson Scholar (Fall-Spring 2022)</li>
-                <li>Dean's List, WPI (Fall 2022)</li>
-                <li>Dean's List, WPI (Fall-Spring 2023)</li>
-                <li>Dean's List, WPI (Fall 2024)</li>
+                <li>Dean’s List, WPI (Fall 2022)</li>
+                <li>Dean’s List, WPI (Fall-Spring 2023)</li>
+                <li>Dean’s List, WPI (Fall 2024)</li>
             </ul>
             <br>
             <a href="static/Transcript.pdf" download="Transcript.pdf" class="download-button">
@@ -318,3 +328,20 @@
     </body>
 
 </html>
+
+
+<script>
+    const navLinks = document.getElementById('menu');
+    
+    function toggleDetails(){
+        navLinks.classList.toggle('active')
+    }
+
+    // Close menu after clicking an option
+    document.querySelectorAll('#menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active'); 
+        });
+    });
+
+</script>
