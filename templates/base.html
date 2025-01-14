@@ -4,17 +4,27 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Fira Code'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="static/style.css">
+
+        <title>Quan Dinh's Portfolio</title>
+        <link rel="icon" type="image/png" href="static/web_logo.png">
     </head>
 
     <body>
-        <ul class="NavBar">
-            <li><a href="#section5">Contacts</a></li>
-            <li><a href="#section4">Skills</a></li>
-            <li><a href="#section3">Education</a></li>
-            <li><a href="#section2">Projects</a></li>
-            <li><a href="#section1">Home</a></li>
-        </ul>
+        <div class="NavBar">
+            <button id="menu-toggle" onclick="toggleDetails()">
+                ☰
+            </button>
+
+            <ul id="menu" class="nav-links">
+                <li><a href="#section1">Home</a></li>
+                <li><a href="#section2">Projects</a></li>
+                <li><a href="#section3">Education</a></li>
+                <li><a href="#section4">Skills</a></li>
+                <li><a href="#section5">Contacts</a></li>
+            </ul>
+        </div>
 
         <div style="margin-top: 46px;">
             {% block content %}
@@ -23,3 +33,21 @@
     </body>
 
 </html>
+
+{% block script %}
+<script>
+    const navLinks = document.getElementById('menu');
+    
+    function toggleDetails(){
+        navLinks.classList.toggle('active')
+    }
+
+    // Close menu after clicking an option
+    document.querySelectorAll('#menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active'); 
+        });
+    });
+
+</script>
+{% endblock %}
