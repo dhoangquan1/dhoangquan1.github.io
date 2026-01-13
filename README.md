@@ -1,5 +1,7 @@
 # dhoangquan1.github.io
 
+<kbd>[Portfolio Website](https://dhoangquan1.github.io)</kbd>
+
 This is my portfolio website displaying most of my projects, skills, and statuses.
 
 You can develop the local dev environment using Flask, then use Freeze to "squash" the HTMLs file into index.html
