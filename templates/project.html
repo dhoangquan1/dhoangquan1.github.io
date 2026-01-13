@@ -1,8 +1,75 @@
 {% block content %}
     <h2><u>Projects</u></h2>
 
-    {% include "_project1.html" %}
-    <hr style="width:40%; margin-bottom: 30px; margin-top: 30px">
-    {% include "_project2.html" %}
+    <div class="carousel">
 
+        <button class="nav-btn prev" onclick="scrollCarousel(-1)">&#10094;</button>
+        
+        <!-- Scrollable Area -->
+        <div class="carousel-track" id="carouselTrack">
+            <div class="carousel-card" data-index="0"> {% include "_project1.html" %} </div>
+            <div class="carousel-card" data-index="1"> {% include "_project3.html" %} </div>
+            <div class="carousel-card" data-index="2"> {% include "_project2.html" %} </div>
+            <div class="carousel-card" data-index="3"> {% include "_project5.html" %} </div>
+            <div class="carousel-card" data-index="4"> {% include "_project4.html" %} </div>
+        </div>
+
+        <button class="nav-btn next" onclick="scrollCarousel(1)">&#10095;</button>
+
+        <div class="carousel-dots" id="carouselDots">
+            <span class="dot active" onclick="goToSlide(0)"></span>
+            <span class="dot" onclick="goToSlide(1)"></span>
+            <span class="dot" onclick="goToSlide(2)"></span>
+            <span class="dot" onclick="goToSlide(3)"></span>
+            <span class="dot" onclick="goToSlide(4)"></span>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block script %}
+<script>
+    // CAROUSEL ARROWS SCROLLING FUNCTION
+    function scrollCarousel(direction) {
+        const track = document.getElementById('carouselTrack');
+        track.scrollBy({
+            left: direction * track.firstElementChild.offsetWidth,
+            behavior: 'smooth'
+        });
+    }
+
+    // CAROUSEL DOTS SCROLLING FUNCTION
+    function goToSlide(index) {
+        const track = document.getElementById('carouselTrack');
+        const scrollAmount = track.clientWidth;
+        track.scrollTo({
+            left: index * scrollAmount,
+            behavior: 'smooth'
+        });
+    }
+
+    // CAROUSEL DOTS UPDATE
+    document.addEventListener('DOMContentLoaded', () => {
+        const track = document.getElementById('carouselTrack');
+        const dots = document.querySelectorAll('.dot');
+        const cards = document.querySelectorAll('.carousel-card');
+
+        const observerOptions = {
+            root: track,
+            threshold: 0.6
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const index = entry.target.getAttribute('data-index');
+                    dots.forEach(dot => dot.classList.remove('active'));
+                    dots[index].classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        cards.forEach(card => observer.observe(card));
+    });
+</script>
 {% endblock %}

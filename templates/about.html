@@ -1,20 +1,34 @@
 {%block content%}
-    <video class="video-background" autoplay muted loop>
-        <source src="static/Stars.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <div class="video-content">
-        <h1>Hello, I am <span class="red-text">Quan Dinh</span></h1>
-        <h2><span class="red-text">CS Junior</span> at Worcester Polytechnic Institute</h2>
-        <p>
-            Driven by the desire to learn more, I enjoyed all aspects of Software 
-            Engineering. While my interests have a wide span, I particularly 
-            love <b class="red-text">back-end development</b>, where I can craft robust architecture, and 
-            <b class="red-text">front-end development</b>, where I can create visually appealing UI.
-        </p>
-        </br>
-        <a href="static/QDinh_Resume.pdf" download="Resume.pdf" class="download-button">
-            Download my resume
-        </a>
+    <div class="about-left-container">
+        <div class="video-content">
+            <h1>Hello, I am <span class="red-text">Quan Dinh</span></h1>
+            <h2><span class="red-text">CS BS/MS student</span> at Worcester Polytechnic Institute</h2>
+            <p>
+                Driven by the desire to learn more, I enjoyed all aspects of Software 
+                Engineering. While my interests have a wide span, I particularly 
+                love <b class="red-text">back-end development</b>, where I can craft robust architecture, and 
+                <b class="red-text">front-end development</b>, where I can create visually appealing UI.
+            </p>
+            </br>
+            <a href="static/QDinh_Resume.pdf" download="QDinh_Resume.pdf" class="download-button">
+                Download my resume
+            </a>
+            </br>
+            <div class="contact-social-container">
+                <a href="https://github.com/dhoangquan1" target="_blank">
+                    <img class="social-logo" src="static/symbols/github.png">
+                </a>
+                <a href="https://www.linkedin.com/in/quan-dinh-baa666263/" target="_blank">
+                    <img class="social-logo" src="static/symbols/linkedin.png">
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="about-right-container">
+        <video class="video-background" autoplay muted loop disablePictureInPicture oncontextmenu="return false;">
+            <source src="static/hkpixel.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </div>
 {%endblock%}
