@@ -6,6 +6,7 @@ app = Flask(__name__)
 
 app.config['FREEZER_DESTINATION'] = 'docs'
 app.config['FREEZER_BASE_URL'] = 'dhoangquan1.github.io'
+app.config['FREEZER_RELATIVE_URLS'] = True 
 
 @app.route("/")
 def index():
